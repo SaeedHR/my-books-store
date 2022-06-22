@@ -1,0 +1,18 @@
+import { ReactElement } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { StoreProvider } from "../store";
+
+import Layout from "./Layout";
+import Routes from "./Routes";
+
+export default function App(): ReactElement {
+  return (
+    <StoreProvider>
+      <BrowserRouter>
+        <Layout>
+          <Routes />
+        </Layout>
+      </BrowserRouter>
+    </StoreProvider>
+  );
+}
